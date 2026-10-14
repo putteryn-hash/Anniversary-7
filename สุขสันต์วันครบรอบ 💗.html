@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>สุขสันต์วันครบรอบ 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--ink:#5b3b6e;--pink:#ff8fb1;--pink2:#ff6f9c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;overflow:hidden;font-family:'Mali','Sarabun','Noto Sans Thai',sans-serif;color:var(--ink);background:linear-gradient(#bfe9ff,#f4fbff 70%)}
+#stage{position:fixed;inset:0;overflow:hidden}
+.sun{position:absolute;top:6vh;right:8vw;width:70px;height:70px;border-radius:50%;background:#ffe27a;box-shadow:0 0 0 12px #fff2b8aa}
+.cloud{position:absolute;background:#fff;border-radius:50px;height:34px;width:100px;opacity:.95;animation:drift linear infinite}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud:before{width:46px;height:46px;top:-22px;left:14px}.cloud:after{width:36px;height:36px;top:-14px;left:50px}
+@keyframes drift{from{transform:translateX(-160px)}to{transform:translateX(110vw)}}
+.hill{position:absolute;bottom:-8vh;left:-10vw;width:120vw;height:30vh;background:#9be58f;border-radius:50% 50% 0 0}
+.hill.b{background:#7fd873;left:20vw;width:100vw;height:24vh}
+#plane{position:absolute;top:13vh;left:0;width:420px;height:120px;display:none;z-index:5}
+#banner{position:absolute;left:0;top:30px;width:230px;height:54px;background:#fff;border:4px solid var(--pink2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;color:var(--pink2);box-shadow:0 4px 0 #ffc0d4}
+#string{position:absolute;left:230px;top:56px;width:40px;height:3px;background:var(--pink2)}
+#plane svg{position:absolute;left:265px;top:0;width:155px;height:110px;animation:bob 1s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(8px) rotate(2deg)}}
+.prop{transform-origin:153px 58px;animation:spin .1s linear infinite alternate}@keyframes spin{to{transform:scaleY(.25)}}
+.seal{position:absolute;left:50%;top:38%;width:24px;height:24px;margin:-2px 0 0 -12px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff8fa8,#d6335f);color:#fff;font-size:14px;line-height:24px;text-align:center;font-style:normal;z-index:2;box-shadow:0 2px 0 #0003}
+.env:before{content:"";position:absolute;inset:0;background:linear-gradient(to top right,transparent 48%,#e9c27a 49% 51%,transparent 52%),linear-gradient(to top left,transparent 48%,#e9c27a 49% 51%,transparent 52%)}
+.env:after{content:"";position:absolute;left:0;top:0;width:100%;height:62%;background:linear-gradient(#ffeebd,#ffd98a);clip-path:polygon(0 0,100% 0,50% 100%)}
+.gift{position:fixed;left:50%;bottom:15vh;width:140px;height:140px;margin-left:-70px;z-index:6;display:none;cursor:pointer}
+.gbody{position:absolute;bottom:0;left:0;width:140px;height:92px;background:radial-gradient(circle,#ffffff66 3.5px,transparent 4.5px) 0 0/22px 22px,linear-gradient(135deg,#ffb0cb,#ff6f9c);border:4px solid #d6457a;border-radius:10px 10px 14px 14px;box-shadow:inset -14px -10px 0 #0000001a,0 10px 0 #0000001f;z-index:2;overflow:hidden}
+.gbody:after,.glid:after{content:"";position:absolute;left:50%;margin-left:-11px;width:22px;top:0;bottom:0;background:linear-gradient(90deg,#ffd23f,#fff4b0,#ffd23f);box-shadow:0 0 0 2px #e6a800}
+.glid{position:absolute;left:-6px;bottom:88px;width:152px;height:38px;background:linear-gradient(135deg,#ffbcd2,#ff7aa3);border:4px solid #d6457a;border-radius:12px;box-shadow:inset 0 -8px 0 #0000001a;z-index:3;transition:transform .8s cubic-bezier(.3,1.5,.5,1),opacity .8s;transform-origin:left bottom}
+.glid:before{content:"";position:absolute;left:50%;top:-34px;margin-left:-38px;width:76px;height:34px;background:radial-gradient(circle at 50% 100%,#ffb300 7px,transparent 8px),radial-gradient(ellipse at 25% 100%,transparent 8px,#ffd23f 9px 16px,transparent 17px),radial-gradient(ellipse at 75% 100%,transparent 8px,#ffd23f 9px 16px,transparent 17px)}
+.env{position:absolute;left:20px;bottom:40px;width:100px;height:70px;background:linear-gradient(#fffaf0,#ffefc4);border:3px solid #e0a94e;border-radius:8px;box-shadow:0 3px 0 #e0a94e66;overflow:hidden;z-index:1;transition:transform .9s .3s cubic-bezier(.3,1.4,.5,1);display:flex;align-items:center;justify-content:center;font-size:30px}
+.gift.open .glid{transform:translate(-30px,-80px) rotate(-35deg);opacity:.0}
+.gift.open .env{transform:translateY(-120px) rotate(-4deg);animation:wig 1.6s 1.2s ease-in-out infinite alternate}
+@keyframes wig{to{transform:translateY(-130px) rotate(4deg)}}
+.gift.hint{animation:jig 1.2s ease-in-out infinite}
+@keyframes jig{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+#msg{position:fixed;top:24vh;left:0;right:0;text-align:center;padding:0 20px;font-size:clamp(20px,5vw,30px);font-weight:700;opacity:0;transition:opacity .6s;z-index:8;pointer-events:none}
+#msg small{display:block;margin-top:10px;font-size:.62em;font-weight:600;color:var(--pink2);animation:pulse 1.2s infinite alternate}
+@keyframes pulse{to{transform:scale(1.12)}}
+#ask{position:fixed;top:20vh;left:0;right:0;text-align:center;z-index:9;opacity:0;pointer-events:none;transition:opacity .5s}
+#ask.on{opacity:1;pointer-events:auto}
+#ask h2{margin:0 0 16px;font-size:clamp(24px,6vw,34px)}
+.btn{font-family:inherit;font-size:20px;font-weight:700;border:3px solid #e0527f;border-radius:30px;padding:10px 26px;margin:6px;cursor:pointer;background:var(--pink);color:#fff;box-shadow:0 5px 0 #e0527f;transition:transform .1s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #e0527f}
+.btn.alt{background:#fff;color:var(--pink2)}
+#center{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:clamp(26px,7vw,48px);font-weight:700;color:var(--pink2);text-shadow:0 3px 0 #fff,0 0 20px #fff;z-index:30;opacity:0;pointer-events:none;transition:opacity .5s}
+#center.on{opacity:1}
+#ov{position:fixed;inset:0;background:#ffffffb3;backdrop-filter:blur(4px);z-index:20;display:none;opacity:0;transition:opacity .5s;perspective:900px}
+#ov.on{opacity:1}
+#bigenv{position:absolute;left:50%;top:50%;width:300px;height:200px;margin:-100px 0 0 -150px;transition:transform .8s,opacity .6s}
+#bigenv .eb{position:absolute;inset:0;background:linear-gradient(#fff8dc,#ffe7a8);border:4px solid #e0a94e;border-radius:14px;overflow:hidden;box-shadow:0 14px 26px #e0a94e55}
+#bigenv .eb:before{content:"";position:absolute;inset:0;background:linear-gradient(to top right,transparent 49%,#f3d58f 50% 51%,transparent 52%),linear-gradient(to top left,transparent 49%,#f3d58f 50% 51%,transparent 52%)}
+#flap{position:absolute;left:0;top:0;width:300px;height:110px;transform-origin:top;transition:transform .8s;background:linear-gradient(#ffeebd,#ffc766);clip-path:polygon(0 0,100% 0,50% 100%);z-index:3;border-radius:6px}
+#flap.open{transform:rotateX(180deg);z-index:0}
+#heart{position:absolute;left:50%;top:78px;margin-left:-16px;font-size:32px;z-index:4;transition:opacity .4s}
+#letter{position:fixed;left:50%;top:50%;width:min(92vw,540px);max-height:80vh;overflow:auto;background:#fffdf5;border:4px solid #f5c26b;border-radius:16px;padding:22px 22px 0;transform:translate(-50%,-30%) scale(.25);opacity:0;transition:transform .9s cubic-bezier(.3,1.2,.5,1),opacity .5s;transform-origin:center;z-index:21;display:none;background-image:repeating-linear-gradient(transparent 0 33px,#ffe6ef 33px 34px)}
+#letter.show{transform:translate(-50%,-50%) scale(1);opacity:1}
+#letter h3{margin:0 0 10px;color:var(--pink2);font-size:22px}
+#letter p{margin:0;font-size:17px;line-height:34px;word-break:break-word}
+#letter .bar{position:sticky;bottom:0;background:#fffdf5;text-align:center;padding:10px 0 14px}
+#restart{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;font-size:17px;padding:8px 20px;opacity:0;pointer-events:none;transition:opacity .6s}
+#restart.on{opacity:1;pointer-events:auto}
+.heartf{position:fixed;bottom:-30px;z-index:25;pointer-events:none;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-110vh) rotate(25deg);opacity:.2}}
+</style></head><body>
+<div id="stage">
+<div class="sun"></div>
+<div class="cloud" style="top:10vh;animation-duration:38s;animation-delay:-10s"></div>
+<div class="cloud" style="top:30vh;animation-duration:52s;animation-delay:-30s;transform:scale(.8)"></div>
+<div class="cloud" style="top:52vh;animation-duration:44s;animation-delay:-5s"></div>
+<div class="hill"></div><div class="hill b"></div>
+<div id="plane"><div id="banner">14 ตุลาคม</div><div id="string"></div>
+<svg viewBox="0 0 155 110"><defs><linearGradient id="pb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2d6"/><stop offset="1" stop-color="#ff6f9c"/></linearGradient><linearGradient id="pw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#ffd0e0"/></linearGradient></defs><g stroke="#d6457a" stroke-width="3.5" stroke-linejoin="round"><path d="M66 50 L46 14 L70 14 L92 48Z" fill="#ff9dbd"/><path d="M16 54 L4 22 L28 28 L40 52Z" fill="url(#pw)"/><path d="M12 62 L2 76 L26 70Z" fill="#ffd0e0"/><path d="M8 58 Q8 38 40 38 L112 38 Q146 40 149 58 Q146 78 112 80 L36 80 Q8 78 8 58Z" fill="url(#pb)"/></g><path d="M20 68 Q76 78 140 68" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"/><path d="M104 41 Q126 38 136 54 L104 54Z" fill="#cfeeff" stroke="#d6457a" stroke-width="3" stroke-linejoin="round"/><path d="M110 44 Q120 42 126 48" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/><g fill="#cfeeff" stroke="#d6457a" stroke-width="3"><circle cx="50" cy="56" r="7"/><circle cx="72" cy="56" r="7"/><circle cx="94" cy="56" r="7"/></g><text x="11" y="42" font-size="15" fill="#ff4f86" font-family="sans-serif">♥</text><path d="M72 66 L46 100 L76 100 L104 68Z" fill="url(#pw)" stroke="#d6457a" stroke-width="3.5" stroke-linejoin="round"/><circle cx="150" cy="58" r="6" fill="#ffd23f" stroke="#d6457a" stroke-width="3"/><ellipse class="prop" cx="153" cy="58" rx="4" ry="24" fill="#fff" opacity=".7"/></svg></div>
+<div class="gift" id="gift"><div class="env" id="miniEnv"><i class="seal">♥</i></div><div class="gbody"></div><div class="glid"></div></div>
+</div>
+<div id="msg">อยากรู้มั้ยข้างในกล่องมีอะไร เปิดดูเลยสิ<small>คลิกเพื่อเปิดดู 👆</small></div>
+<div id="ask"><h2>อ่านเลยมั้ย 💌</h2><button class="btn" id="yes">อ่านเลย</button><button class="btn alt" id="no">ไม่อ่าน</button></div>
+<div id="center"></div>
+<button class="btn alt" id="restart">🔄 เริ่มใหม่</button>
+<div id="ov"><div id="bigenv"><div class="eb"></div><div id="heart" class="seal" style="width:42px;height:42px;margin-left:-21px;top:82px;line-height:42px;font-size:22px">♥</div><div id="flap"></div></div></div>
+<div id="letter"><h3>💗</h3><p>สุขสันต์วันครบรอบบ 7 เดือนนน เผลอแปปเดียวเราก็อยู่ด้วยกันมา 7 เดือนแล่วว เค้าดีใจมากๆเลยนะที่มีโมเข้ามาในชีวิต ตลอดเวลาที่ผ่านมาเราอาจจะมีทั้งวันที่มีความสุข วันที่งอนกาน ม่ายเข้าใจกันบ้าง แต่สำหรับเค้า โมก็ยังเป็นคนที่เค้าอยากมีอยู่ข้างๆไปเรื่อยๆอยู่ดี ขอบคุณที่เข้ามาเป็นส่วนหนึ่งในชีวิตเค้าา ขอบคุณที่คอยใส่ใจ คอยรับฟัง และทำให้วันธรรมดาๆของเค้ามีความหมายมากขึ้นน แค่ได้คุยกับโม ได้รู้ว่าโมเป็นยังไงในแต่ละวันน เค้าก็มีความสุขแล่วว แบร่ เค้ารู้นะว่าบางครั้งเค้าก็อาจจะงี่เง่าา เอาแต่ใจ หรือทำอะไรที่ทำให้โมน้อยใจโดยที่เค้าม่ายรู้ตัว เค้าขอโทดนะ เค้าอยากเป็นแฟนที่ดีขึ้นสำหรับโมม อยากใส่ใจความรู้สึกโมให้มากกว่านี้ย และอยากให้โมรู้สึกสบายใจที่มีเค้าอยู่ว เค้าอาจจะม่ายด้ายทำทุกอย่างได้ดีเสมอไป แต่เค้าจะพยายามปรับปรุงตัวและดูแลความรู้สึกของโมให้ดีขึ้นเรื่อยๆเลยย เค้าม่ายรู้หรอกว่าอนาคตเราจาเป็นยังงาย แต่ตอนนี้เค้ารู้ว่าเค้ายังอยากมีโมอยู่ในทุกๆเดือนต่อจากนี้ย อยากมีเรื่องราวดีๆด้วยกันอีกเย้อๆ อยากผ่านทั้งวันที่ดีและวันที่ม่ายเข้าใจกันไปด้วยกาน เค้าอยากให้เราค่อยๆเรียนรู้กันน รักกันด้วยความเข้าใจจ และไม่ลืมที่จะใส่ใจกันเหมือนวันแรกๆ ขอบคุณที่ยังมีกันนะะะ เค้ารักโมมากๆเลยนะะ สุขสันต์วันครบรอบ 7 เดือนน ขอให้เราได้ฉลองครบรอบด้วยกันไปอีกหลายๆเดือนเล้ยย อยู่เป็นความสุขของกันและกันไปนานๆนะคนเก่งของเค้าา</p><div class="bar"><button class="btn" id="close">ปิดซองจดหมาย</button></div></div>
+<script>
+const $=id=>document.getElementById(id),sl=ms=>new Promise(r=>setTimeout(r,ms));
+const gift=$('gift'),plane=$('plane'),msg=$('msg'),ask=$('ask'),ov=$('ov'),flap=$('flap'),big=$('bigenv'),lt=$('letter'),ctr=$('center');
+let busy=true;
+function hearts(n){for(let i=0;i<n;i++){const h=document.createElement('div');h.className='heartf';h.textContent=['💗','💖','💕','🌸'][i%4];h.style.left=Math.random()*100+'vw';h.style.fontSize=16+Math.random()*22+'px';h.style.animationDuration=4+Math.random()*4+'s';h.style.animationDelay=Math.random()*1.5+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),10000)}}
+async function intro(){
+ const W=innerWidth,dur=6500,start=-430,end=W+30,pw=420;
+ plane.style.display='block';
+ plane.animate([{transform:`translateX(${start}px)`},{transform:`translateX(${end}px)`}],{duration:dur,easing:'linear',fill:'forwards'});
+ const dropX=W/2-pw+80; // plane body above gift
+ const t=(dropX-start)/(end-start)*dur;
+ await sl(Math.max(300,t));
+ const py=plane.getBoundingClientRect().top+70,gy=gift.getBoundingClientRect();
+ gift.style.display='block';
+ const fall=innerHeight-(innerHeight*.15+140)-py;
+ gift.animate([{transform:`translateY(${-fall-10}px) rotate(-15deg)`,opacity:1,offset:0},{transform:'translateY(0) rotate(8deg)',offset:.7,easing:'ease-out'},{transform:'translateY(-18px) rotate(-4deg)',offset:.82},{transform:'translateY(0) rotate(0)',offset:1}],{duration:1500,easing:'ease-in'});
+ await sl(dur-t+200);
+ plane.style.display='none';
+ msg.style.opacity=1;gift.classList.add('hint');busy=false;
+}
+gift.addEventListener('click',async()=>{
+ if(busy||gift.classList.contains('open'))return;busy=true;
+ gift.classList.remove('hint');msg.style.opacity=0;gift.classList.add('open');hearts(10);
+ await sl(1900);ask.classList.add('on');busy=false;
+});
+$('no').onclick=async()=>{ask.classList.remove('on');ctr.textContent='ไม่ให้ จำเป็นต้องอ่าน';ctr.classList.add('on');await sl(2000);ctr.classList.remove('on');await sl(400);ask.classList.add('on')};
+$('yes').onclick=async()=>{
+ ask.classList.remove('on');ov.style.display='block';big.style.transform='';big.style.opacity=1;flap.classList.remove('open');$('heart').style.opacity=1;
+ await sl(30);ov.classList.add('on');await sl(700);
+ flap.classList.add('open');$('heart').style.opacity=0;await sl(900);
+ lt.style.display='block';lt.scrollTop=0;await sl(30);lt.classList.add('show');big.style.transform='translateY(30vh)';big.style.opacity=0;
+};
+$('close').onclick=async()=>{busy=true;
+ lt.classList.remove('show');big.style.transform='';big.style.opacity=1;await sl(700);
+ lt.style.display='none';flap.classList.remove('open');$('heart').style.opacity=1;await sl(900);
+ big.style.transform='translateY(20vh) scale(.2)';big.style.opacity=0;ov.classList.remove('on');await sl(700);
+ ov.style.display='none';gift.classList.remove('open');await sl(1300);
+ ctr.textContent='สุขสันต์วันครบรอบ 7เดือนนะ 💗';ctr.classList.add('on');hearts(30);$('restart').onclick=()=>location.reload();$('restart').classList.add('on');
+};
+intro();
+</script></body></html>
